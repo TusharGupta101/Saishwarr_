@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Sliders | Examples</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    .slider-section { margin-bottom: 4rem; }
+    .slider-section h2 { margin-bottom: 2rem; color: #333; }
+    .carousel-caption { background: rgba(0,0,0,0.5); padding: 0.5rem 1rem; border-radius: 8px; }
+    .carousel-img { height: 400px; object-fit: cover; }
+    .carousel-img-sm { height: 300px; object-fit: cover; }
+    .split-slide { min-height: 350px; }
+    .split-slide .info-half { display: flex; flex-direction: column; justify-content: center; padding: 2rem; }
+    .split-slide img { height: 350px; width: 100%; object-fit: cover; }
+  </style>
+</head>
+<body class="bg-light py-5">
+  <div class="container">
+    <h1 class="text-center mb-5">Bootstrap Slider Examples</h1>
+
+    <!-- Slider 1: Basic Carousel with Indicators and Controls -->
+    <section class="slider-section">
+      <h2><i class="bi bi-1-circle me-2"></i>Basic Carousel</h2>
+      <div id="slider1" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#slider1" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#slider1" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#slider1" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://picsum.photos/1200/400?random=1" class="d-block w-100 carousel-img" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/1200/400?random=2" class="d-block w-100 carousel-img" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/1200/400?random=3" class="d-block w-100 carousel-img" alt="Slide 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#slider1" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#slider1" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Slider 2: Carousel with Captions -->
+    <section class="slider-section">
+      <h2><i class="bi bi-2-circle me-2"></i>Carousel with Captions</h2>
+      <div id="slider2" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#slider2" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#slider2" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#slider2" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://picsum.photos/1200/400?random=4" class="d-block w-100 carousel-img" alt="Nature">
+            <div class="carousel-caption">
+              <h5>Beautiful Landscape</h5>
+              <p>Explore stunning views and natural scenery.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/1200/400?random=5" class="d-block w-100 carousel-img" alt="City">
+            <div class="carousel-caption">
+              <h5>Urban Life</h5>
+              <p>Discover vibrant city skylines and architecture.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/1200/400?random=6" class="d-block w-100 carousel-img" alt="Ocean">
+            <div class="carousel-caption">
+              <h5>Ocean Views</h5>
+              <p>Relax with peaceful coastal horizons.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#slider2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#slider2" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Slider 3: Dark Variant Carousel -->
+    <section class="slider-section">
+      <h2><i class="bi bi-3-circle me-2"></i>Dark Carousel</h2>
+      <div id="slider3" class="carousel slide carousel-dark" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#slider3" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#slider3" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#slider3" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner rounded-3 overflow-hidden shadow">
+          <div class="carousel-item active">
+            <img src="https://picsum.photos/1200/400?random=7" class="d-block w-100 carousel-img" alt="Slide 1">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded">
+              <h5>Dark Theme Slide</h5>
+              <p>Light arrows and indicators for dark backgrounds.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/1200/400?random=8" class="d-block w-100 carousel-img" alt="Slide 2">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded">
+              <h5>Modern Design</h5>
+              <p>Sleek controls with carousel-dark class.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/1200/400?random=9" class="d-block w-100 carousel-img" alt="Slide 3">
+            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded">
+              <h5>Professional Look</h5>
+              <p>Perfect for portfolios and showcases.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#slider3" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#slider3" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Slider 4: Multi-item / Thumbnail-style Carousel -->
+    <section class="slider-section">
+      <h2><i class="bi bi-4-circle me-2"></i>Compact Image Slider</h2>
+      <div id="slider4" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-3 overflow-hidden shadow">
+          <div class="carousel-item active">
+            <img src="https://picsum.photos/1200/300?random=10" class="d-block w-100 carousel-img-sm" alt="Compact 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/1200/300?random=11" class="d-block w-100 carousel-img-sm" alt="Compact 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/1200/300?random=12" class="d-block w-100 carousel-img-sm" alt="Compact 3">
+          </div>
+          <div class="carousel-item">
+            <img src="https://picsum.photos/1200/300?random=13" class="d-block w-100 carousel-img-sm" alt="Compact 4">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#slider4" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#slider4" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      <div class="text-center mt-2">
+        <small class="text-muted">4 slides • No indicators • Arrow controls only</small>
+      </div>
+    </section>
+
+    <!-- Slider 5: Split - Half Info, Half Image -->
+    <section class="slider-section">
+      <h2><i class="bi bi-5-circle me-2"></i>Split Slider (Info + Image)</h2>
+      <div id="slider5" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#slider5" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#slider5" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#slider5" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner rounded-3 overflow-hidden shadow bg-white">
+          <div class="carousel-item active">
+            <div class="row g-0 split-slide">
+              <div class="col-12 col-md-6 info-half bg-primary text-white">
+                <h4>Professional Services</h4>
+                <p class="mb-0">We deliver top-quality solutions tailored to your needs. Trust our expert team for reliable results.</p>
+                <a href="#" class="btn btn-light btn-sm mt-3 align-self-start">Learn More</a>
+              </div>
+              <div class="col-12 col-md-6">
+                <img src="https://picsum.photos/800/400?random=14" class="d-block w-100" alt="Services">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row g-0 split-slide">
+              <div class="col-12 col-md-6 order-md-2 info-half bg-dark text-white">
+                <h4>Creative Solutions</h4>
+                <p class="mb-0">Innovation at its best. We combine design and technology to create stunning experiences for your brand.</p>
+                <a href="#" class="btn btn-outline-light btn-sm mt-3 align-self-start">Get Started</a>
+              </div>
+              <div class="col-12 col-md-6 order-md-1">
+                <img src="https://picsum.photos/800/400?random=15" class="d-block w-100" alt="Creative">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row g-0 split-slide">
+              <div class="col-12 col-md-6 info-half" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <h4>24/7 Support</h4>
+                <p class="mb-0">Our dedicated support team is always here to help. Reach us anytime for assistance.</p>
+                <a href="#" class="btn btn-light btn-sm mt-3 align-self-start">Contact Us</a>
+              </div>
+              <div class="col-12 col-md-6">
+                <img src="https://picsum.photos/800/400?random=16" class="d-block w-100" alt="Support">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#slider5" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#slider5" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

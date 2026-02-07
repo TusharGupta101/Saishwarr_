@@ -1,0 +1,9 @@
+# AutoWorks Pro - robots.txt for SEO
+User-agent: *
+Allow: /
+
+# Sitemap (replace yoursite.com with your actual domain)
+Sitemap: https://yoursite.com/sitemap.xml
+
+# Optional: disallow admin or private paths if you add them later
+# Disallow: /admin/
