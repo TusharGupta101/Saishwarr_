@@ -20,14 +20,19 @@ const sendContactEmail = async (formData) => {
   
   const { name, email, phone, serviceType, message } = formData;
   
+  // Extract first and last name from the combined name field
+  const nameParts = name.split(' ');
+  const firstName = nameParts[0];
+  const lastName = nameParts.slice(1).join(' ') || 'N/A';
+  
   // Format service type for better readability
   const serviceLabels = {
-    engine: "Engine Repair",
-    oil: "Oil Change",
-    brake: "Brake Service",
-    diagnostics: "Diagnostics",
-    tire: "Tire Service",
-    ac: "AC Repair",
+    spare: "Spare Part",
+    milling: "Milling",
+    drilling: "Drilling",
+    tapping: "Tapping",
+    embossing: "Embossing",
+    threading: "Threading",
     other: "Other Service"
   };
   

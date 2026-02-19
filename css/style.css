@@ -802,6 +802,86 @@ a .mission-vision-card p {
   overflow: hidden;
   transition: all var(--transition);
   height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card img.card-img-top,
+.equipment-card .img-placeholder {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.product-card img.card-img-top img,
+.equipment-card .img-placeholder img {
+  max-height: 260px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: bicubic;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.product-card .card-body,
+.equipment-card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+}
+
+.product-card .card-title,
+.equipment-card .card-title {
+  flex-grow: 1;
+}
+
+.product-card .btn,
+.equipment-card .btn {
+  margin-top: auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+  .product-card img.card-img-top,
+  .equipment-card .img-placeholder {
+    height: 220px;
+    padding: 1.2rem;
+  }
+  
+  .product-card img.card-img-top img,
+  .equipment-card .img-placeholder img {
+    max-height: 180px;
+  }
+  
+  .product-card .card-body,
+  .equipment-card .card-body {
+    min-height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card img.card-img-top,
+  .equipment-card .img-placeholder {
+    height: 260px;
+    padding: 1.5rem;
+  }
+  
+  .product-card img.card-img-top img,
+  .equipment-card .img-placeholder img {
+    max-height: 220px;
+  }
 }
 
 .equipment-card:hover,

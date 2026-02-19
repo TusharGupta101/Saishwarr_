@@ -67,24 +67,10 @@
     });
   }
 
-  function updateLangDropdown(lang) {
-    var btn = document.getElementById("langToggle");
-    if (btn) btn.textContent = lang === "en" ? "EN" : "ES";
-  }
-
   function init() {
     var lang = getLang();
     document.documentElement.setAttribute("lang", lang);
     applyTranslations(lang);
-    updateLangDropdown(lang);
-
-    var btn = document.getElementById("langToggle");
-    if (btn) {
-      btn.addEventListener("click", function () {
-        var current = getLang();
-        setLang(current === "en" ? "es" : "en");
-      });
-    }
   }
 
   if (document.readyState === "loading") {
