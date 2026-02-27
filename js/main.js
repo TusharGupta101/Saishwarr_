@@ -1,7 +1,7 @@
-  /**
- * Automotive Workshop - Main JavaScript
- * Form validation, smooth scroll, dark mode, navbar behavior
- */
+/**
+* Automotive Workshop - Main JavaScript
+* Form validation, smooth scroll, dark mode, navbar behavior
+*/
 
 (function () {
   "use strict";
@@ -162,7 +162,7 @@
       };
 
       try {
-        const apiBase = window.CONTACT_API_BASE || "http://localhost:3001";
+        const apiBase = window.CONTACT_API_BASE || "http://localhost:8620";
         const res = await fetch(apiBase + "/api/contact", {
           method: "POST",
           headers: { "Content-Type": "application/json" },

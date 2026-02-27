@@ -40,7 +40,7 @@ const sendContactEmail = async (formData) => {
   
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to: "lawangeatharva@gmail.com",
+    to: "saishwarautoind@gmail.com",
     subject: `New Contact Form Submission - ${name}`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
