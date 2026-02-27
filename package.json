@@ -1,0 +1,9 @@
+{
+    "name": "saishwars-root",
+    "version": "1.0.0",
+    "description": "Root configuration for Netlify deployment",
+    "private": true,
+    "dependencies": {
+        "nodemailer": "^6.9.8"
+    }
+}
