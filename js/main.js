@@ -1,7 +1,7 @@
-  /**
- * Automotive Workshop - Main JavaScript
- * Form validation, smooth scroll, dark mode, navbar behavior
- */
+/**
+* Automotive Workshop - Main JavaScript
+* Form validation, smooth scroll, dark mode, navbar behavior
+*/
 
 (function () {
   "use strict";
@@ -162,13 +162,23 @@
       };
 
       try {
-        const apiBase = window.CONTACT_API_BASE || "http://localhost:3001";
-        const res = await fetch(apiBase + "/api/contact", {
+        const apiBase = window.CONTACT_API_BASE || "";
+        const apiEndpoint = apiBase ? apiBase + "/api/contact" : "/.netlify/functions/contact";
+        console.log("Sending to:", apiEndpoint);
+        console.log("Payload:", payload);
+
+        const res = await fetch(apiEndpoint, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
           body: JSON.stringify(payload),
         });
+
+        console.log("Response status:", res.status);
         const data = await res.json().catch(function () { return {}; });
+        console.log("Response data:", data);
 
         if (res.ok && data.success) {
           if (successEl) {
@@ -181,14 +191,15 @@
           });
         } else {
           if (errorEl) {
-            errorEl.textContent = (data && data.error) || "Something went wrong. Please try again or contact us by phone.";
+            errorEl.textContent = (data && data.error) || "Server error: " + res.status + ". Please try again or contact us by phone.";
             errorEl.classList.remove("d-none");
             errorEl.focus();
           }
         }
       } catch (err) {
+        console.error("Form submission error:", err);
         if (errorEl) {
-          errorEl.textContent = "Unable to send. Check your connection or contact us by phone.";
+          errorEl.textContent = "Network error: " + err.message + ". Please check your connection or contact us by phone.";
           errorEl.classList.remove("d-none");
           errorEl.focus();
         }
