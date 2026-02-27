@@ -162,12 +162,17 @@
       };
 
       try {
+<<<<<<< HEAD
         const apiBase = window.CONTACT_API_BASE || "";
         const apiEndpoint = apiBase ? apiBase + "/api/contact" : "/.netlify/functions/contact";
         console.log("Sending to:", apiEndpoint);
         console.log("Payload:", payload);
 
         const res = await fetch(apiEndpoint, {
+=======
+       const apiBase = window.CONTACT_API_BASE || "https://backend-tg6l.onrender.com";;
+        const res = await fetch(apiBase + "/api/contact", {
+>>>>>>> 6c4bd829b8c930c3154b6d0a06f815897756439a
           method: "POST",
           headers: {
             "Content-Type": "application/json",
