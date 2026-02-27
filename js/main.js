@@ -162,7 +162,7 @@
       };
 
       try {
-        const apiBase = window.CONTACT_API_BASE || "http://localhost:8620";
+        const apiBase = window.CONTACT_API_BASE || "https://backend-p82w.onrender.com";
         const res = await fetch(apiBase + "/api/contact", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
